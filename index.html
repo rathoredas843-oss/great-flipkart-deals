@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Great Flipkart Deals</title>
+<title>RAVEEON</title>
 
 <style>
 *{box-sizing:border-box}
@@ -36,7 +36,7 @@ footer{text-align:center;padding:22px;background:#172b68;color:white;margin-top:
 
 <body>
 <header>
-<h1>Great Flipkart Deals</h1>
+<h1>RAVEEON</h1>
 <p>Find great products at great prices!</p>
 </header>
 
@@ -51,34 +51,29 @@ footer{text-align:center;padding:22px;background:#172b68;color:white;margin-top:
 </nav>
 
 <section class="banner">
-<h2>Welcome to Great Flipkart Deals</h2>
+<h2>Welcome to RAVEEON</h2>
 <p>Discover amazing shopping deals!</p>
 </section>
 
 <main id="products">
 <h2>Featured Products</h2>
-
 <div class="filters" id="categories">
 <button class="active" data-category="All">All</button>
 </div>
-
 <div class="products" id="productList">
 <p class="status">Loading products...</p>
 </div>
 </main>
 
 <footer id="about">
-<h3>Great Flipkart Deals</h3>
+<h3>RAVEEON</h3>
 <p>Smart shopping starts here.</p>
 <p class="note">We may earn a commission from qualifying purchases.</p>
 </footer>
 
 <script type="module">
-import { initializeApp } from
-"https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-
-import { getFirestore, collection, getDocs }
-from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBs88H2sk23G_CHr8adHUuZ4Or0ARxBOaQ",
@@ -185,6 +180,7 @@ function renderProducts() {
     const category = getValue(data, ["Category","Catagory","category"]);
 
     const specs = [brand, ram, storage, colour].filter(Boolean).join(" | ");
+
     const imageHTML = validImage(String(image))
       ? `<img src="${safeText(image)}" alt="${safeText(name)}" loading="lazy">`
       : '<span style="font-size:60px">🛍️</span>';
